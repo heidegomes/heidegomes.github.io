@@ -1,129 +1,148 @@
-* {
+html {
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-size: 100%;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-  }
+}
 
-/*Primeira Parte */
+a {
+    color: #F6FAFC;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 body {
-    background-color: black;
-    color: blue;
-    font-size: 20px;
-}
-
-header {
     display: flex;
-    /* border: white 2px solid; */
-    width: auto;
-    height: 250px;
-    margin: 0;
-}
-
-#img-fundo {
-    max-width: 100%;
-    height: auto;
-}
-
-main {
-    display: flex;
-    flex-direction: row;
-    /* border: white 2px solid; */
-    width: auto;
-    height: 500px;
-    margin: 0;
-    margin-left: 200px;
-    margin-right: 200px;
-}
-
-.apresentacao { 
-    display: flex;
-    /* border: white 2px solid; */
-    justify-content: center;
     flex-direction: column;
-    align-self: center;
-    flex-basis: 100%;
-    width: 200px;
+    font-family: Arial, sans-serif;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100%;
 }
 
-.descricao {
-    color: red;
-    display: flex;
-    /* border: white 2px solid; */
-    justify-content: center;
+.profile-infos-container {
     align-items: center;
-    align-content: space-around;
-    text-align: center;
-    height: 250px;
-}
-
-.skills {
+    background-color: #001A3B;
     display: flex;
-    /* border: white 2px solid; */
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-left: 20px;
-    flex-grow: 0;
-}
-
-/* ul {
-    list-style: none;
-} */
-
-.foto-info {
-    display: flex;
-    /* border: white 2px solid; */
+    color: #fff;
     justify-content: space-around;
-    flex-direction: column;
-    align-self: center;
+    padding: 20px 0;
+    text-align: center;
 }
 
-.foto {
-    
+.profile-infos {
+    font-size: 18px;
+}
+
+.profile-infos-image {
+    width: 40px;
+}
+
+.main-container {
+    background-color: rgb(128, 153, 111);
     display: flex;
-    /* border: white 2px solid; */
-    justify-content: center;
-    height: 250px;
-}
-
-#minhafoto {
-    background-color: blue;
-    height: 250px;
     padding: 20px;
 }
 
-.informacoes {
-    display: flex;
-    /* border: white 2px solid; */
-    justify-content: center;
-    align-self: flex-start;
-    align-content: space-around;
-    /* flex-basis: 20%; */
-    height: 250px;
-    width: 280px;
-    background-color: red;
-}
-
-p {
-    margin: 10px;
-    text-align: center;
-}
-footer {
-    position: relative;
-    background-color: yellow;
-    display: flex;
+.certificates-container,
+.bio-container {
     align-items: center;
-    height: 100px;
-    /* border: white 2px solid; */
-    justify-content: space-evenly;
+    display: flex;
+    background-color: #F6FAFC;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #001A3B;
+    flex-direction: column;
+    height: fit-content;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
 }
 
-footer a {
-    color: black;
-    text-decoration: none;
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.certificates-institution {
+    background-color: #aac4e465;
+    color: #001A3B;
+    cursor: default;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 20px;
+}
+
+.project-title {
+    color: #001A3B;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-description,
+.project-github-url,
+.project-keyword {
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: default;
+}
+
+.project-github-url {
+    background-color: #0055B7;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 10px;
+    width: fit-content;
+}
+
+.project-github-url:hover {
+    background-color: #AAC4E4;
+    color: #001A3B;
     cursor: pointer;
-    opacity: 0.8;
-    padding: 0 10px;
+    text-decoration: underline;
 }
 
+.project-key-skill {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+    cursor: default;
+}
+
+.bio-container {
+    width: 40%;
+}
+
+#profile-bio {
+    color: #000a18;
+}
+
+#profile-github {
+    background-image: "github-icon-branco.png";
+}

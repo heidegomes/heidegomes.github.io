@@ -1,124 +1,73 @@
+<!-- events/templates/base.html -->
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heide Gomes - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Splash&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Heide Gomes Casagrande</title>
 </head>
 
+
+<header class="profile-infos-container">
+    <a class="profile-infos" id="profile-name">Heide Gomes</a>
+    <a class="profile-infos" id="profile-github" href="https://github.com/heidegomes"><img
+            src="/static/img/github-icon-branco.png" alt="github" style="width:42px;height:42px"></a>
+    <a class="profile-infos" id="profile-linkedin" href="https://www.linkedin.com/in/heide-gomes-casagrande/"><img
+            src="/static/img/linkedin-icon-circular.png" alt="linkedin" style="width:43px;height:43px"></a>
+</header>
+
 <body>
-    <header>
-        <img src="./imagemFundo.jpg" alt="foto de fundo" id="img-fundo" width="1550" height="300"></section>
-    </header>
-
-    <main>
-        <div class="apresentacao">
-            <div class="descricao">
-                <p>
-                    Olá! E sou a Heide, estudante de Desenvolvimento web na Trybe, sou brasileira e moro no Rio de Janeiro
-                </p>
-            </div>
-
-            <div class="skills">
-                <div id="softSkills">
-                    <p>
-                        <h2><strong>Soft Skills</strong></h2>
-                        <br>
-                    <ul>
-                        <li class="list">Comunicação</li>
-                        <li class="list">Comprometimento</li>
-                        <li class="list">Disciplina</li>
-                        <li class="list">Empatia</li>
-                        <li class="list">Organização</li>
-                        <li class="list">Responsabilidade</li>
-                        <li class="list">Resiliência</li>
-                    </ul>
-                    </p>
-
-                </div>
-                <div id="hardSkills">
-
-                    <p>
-                        <h2 ><strong>Hard Skills</strong></h2>
-                        <br>
-                    <ul>
-                        <li class="list30">Git/Github</li>
-                        <li class="list25">HTML/CSS</li>
-                        <li class="list20">JavaScript</li>
-                    </ul>
-                    </p>
-
-                </div>
+    <container class="main-container">
+        <div class="certificates-container">
+            <h1 class="section-title">Certificados</h1>
+            <div class="certificates-institution">
+                <p>Módulo de Fundamentos do Desenvolvimento Web - Trybe</p>
+                <p>Módulo de Front-End - Trybe</p>
+                <p>Módulo de Back-End - Trybe</p>
+                <p>Módulo de Computer Science - Trybe</p>
             </div>
         </div>
 
-        <div class="foto-info">
-            <div class="foto">
-                <img src="./FotoPerfil.jpeg" alt="minha foto" id="minhafoto"></section>
+        <div class="projects-container">
+            {% for project in projects %}
+            <div class="project-card">
+                <h1 class="project-title">{{ project.name }}</h1>
+                <p class="project-description">{{ project.description }}</p>
+                <p class="project-keyword">{{ project.keyword }}</p>
+                <p class="project-key-skill">{{ project.key_skill }}</p>
+                <a class="project-github-url" href="{{ project.link }}">Repositório</a>
             </div>
-            <div class="informacoes">
-                <p>
-                    Estudande de Desenvolvimento web na Trybe.
-                    <br>
-                    35 anos
-                    <br>
-                    Em transição de carreira.
-                </p>
-            </div>
+            {% endfor %}
         </div>
-    </main>
 
-    <footer>
-        <a href="">GitHub</a>
-        <a href="">Linkedin</a>
-        <a href="">Projetos</a>
-        <a href="">Contato</a>
-    </footer>
-    <!-- 
-<div>
-    <div class="cabecalho">
-        <h1 class="meuNome">Heide Gomes Casagrande</h1>
-        <nav id="nav">
-            <a href="#softSkills">Soft Skills</a> |
-            <a href="#hardSkills">Hard Skills</a> 
-        </nav>
-    </div>
-
-    <div class="image-container"> 
-        <img src="./FotoPerfil.jpeg" alt="minha foto"  id="minhafoto"></section>
-        <p class="descricao">Olá! E sou a Heide, estudante de Desenvolvimento web na Trybe,<br> sou <strong>brasileira</strong> e moro no <strong>Rio de Janeiro</strong> 
-        <br><br>
-        <a href="https://www.linkedin.com/in/heide-gomes-casagrande/"><i>Linkedin</i></a>
-        |
-        <a href="https://github.com/heidegomes"><i>GitHub</i></a>
-        </p>
-    </div>
-</div>
-    <p>
-        <h2 id="softSkills"><strong>Habilidades que mais me orgulho</strong></h2>
-        <ul>
-            <li class="list30">Comunicação</li>
-            <li class="list25">Empatia</li>
-            <li class="list20">Comprometimento</li>
-        </ul>
-
-        <h2 id="hardSkills"><strong>Habilidades técnicas</strong></h2>
-        <ul>
-            <li class="list30">Git/Github</li>
-            <li class="list25">HTML/CSS</li>
-            <li class="list20">JavaScript</li>
-        </ul>
-    </p>
-
-    <p>
-        Site que admiro muito: <a href="www.panelinha.com.br"><i>Panelinha - Rita Lobo</i></a>
-    </p> -->
+        <div class="bio-container">
+            <h1>Sobre mim</h1>
+            <p class="profile-infos" id="profile-bio">
+                Professora por formação e atuante no ramo da moda há 10 anos,
+                sempre utilizei a tecnologia para ensinar e desenvolver
+                novas peças.
+                <br>
+                Iniciei meus estudos de programação em 2021 de forma independente através de cursos online gratuitos.
+                Conclui em
+                novembro de 2023 o Curso de Desenvolvimento Web Trybe, e estou no 2º semestre da faculdade de Análise e
+                Desenvolvimento
+                de Sistemas da Estácio. Procuro a cada dia aprofundar meus conhecimentos em computação para me tornar
+                uma profissional
+                altamente qualificada e preparada para os desafios dinâmicos do mercado de tecnologia.
+                <br>
+                Estou animada com a perspectiva de contribuir para projetos inovadores, aplicar meus conhecimentos de
+                forma prática e,
+                assim, desempenhar um papel significativo no avanço da tecnologia e no desenvolvimento de soluções
+                eficientes.
+                <br>
+                Minhas principais habilidades técnicas até o momento são:
+                HTML | CSS | JavaScript | React | Docker | MySQL | Node.js |TypeScript | Sequelize| Python | Django
+            </p>
+        </div>
+    </container>
 </body>
 
 </html>
