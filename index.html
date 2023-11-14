@@ -22,23 +22,55 @@
         <div class="certificates-container">
             <h1 class="section-title">Certificados</h1>
             <div class="certificates-institution">
-                <p>Módulo de Fundamentos do Desenvolvimento Web - Trybe</p>
-                <p>Módulo de Front-End - Trybe</p>
-                <p>Módulo de Back-End - Trybe</p>
-                <p>Módulo de Computer Science - Trybe</p>
+                Módulo de Fundamentos do Desenvolvimento Web - Trybe
+            </div>
+            <div class="certificates-institution">
+                Módulo de Front-End - Trybe
+            </div>
+            <div class="certificates-institution">
+                Módulo de Back-End - Trybe
+            </div>
+            <div class="certificates-institution">
+                Módulo de Computer Science - Trybe
             </div>
         </div>
 
         <div class="projects-container">
-            {% for project in projects %}
             <div class="project-card">
-                <h1 class="project-title">{{ project.name }}</h1>
-                <p class="project-description">{{ project.description }}</p>
-                <p class="project-keyword">{{ project.keyword }}</p>
-                <p class="project-key-skill">{{ project.key_skill }}</p>
-                <a class="project-github-url" href="{{ project.link }}">Repositório</a>
+                <h1 class="project-title">Star Wars Planets Search</h1>
+                <p class="project-description">A aplicação renderiza uma lista dos planetas da saga Star Wars.</p>
+                <p class="project-keyword">Filtros</p>
+                <p class="project-key-skill">React, Hooks, Context API, CSS, JavaScript, Jest.</p>
+                <a class="project-github-url" href="https://github.com/heidegomes/projeto-starwars-planets-search">
+                    Repositório
+                </a>
             </div>
-            {% endfor %}
+
+            <div class="project-card">
+                <h1 class="project-title">Blogs API</h1>
+                <p class="project-description">aplicação que monta uma API e um banco de dados para um blog.</p>
+                <p class="project-keyword">Blogs</p>
+                <p class="project-key-skill">JavaScript, Node.js, Sequelize, Express.</p>
+                <a class="project-github-url" href="https://github.com/heidegomes/projeto-blogs-api">Repositório</a>
+            </div>
+
+            <div class="project-card">
+                <h1 class="project-title">Trybe Futebol Clube</h1>
+                <p class="project-description">aplicação que monta uma API e um banco de dados para um site informativo
+                    sobre partidas e classificações de futebol.</p>
+                <p class="project-keyword">Placar</p>
+                <p class="project-key-skill">TypeScript, NodeJs, Express, MySQL, Sequelize, Docker
+                    e JWT;</p>
+                <a class="project-github-url" href="https://github.com/heidegomes/projeto-blogs-api">Repositório</a>
+            </div>
+
+            <div class="project-card">
+                <h1 class="project-title">SpotNews</h1>
+                <p class="project-description">aplicação de um site de notícias, utilizando um banco de dados MySQL</p>
+                <p class="project-keyword">Notícias</p>
+                <p class="project-key-skill">Python, Django, Django REST Framework (DRF).</p>
+                <a class="project-github-url" href="https://github.com/heidegomes/projeto-spotnews">Repositório</a>
+            </div>
         </div>
 
         <div class="bio-container">
@@ -47,7 +79,7 @@
                 Professora por formação e atuante no ramo da moda há 10 anos,
                 sempre utilizei a tecnologia para ensinar e desenvolver
                 novas peças.
-                <br>
+                <hr>
                 Iniciei meus estudos de programação em 2021 de forma independente através de cursos online gratuitos.
                 Conclui em
                 novembro de 2023 o Curso de Desenvolvimento Web Trybe, e estou no 2º semestre da faculdade de Análise e
@@ -55,12 +87,12 @@
                 de Sistemas da Estácio. Procuro a cada dia aprofundar meus conhecimentos em computação para me tornar
                 uma profissional
                 altamente qualificada e preparada para os desafios dinâmicos do mercado de tecnologia.
-                <br>
+                <hr>
                 Estou animada com a perspectiva de contribuir para projetos inovadores, aplicar meus conhecimentos de
                 forma prática e,
                 assim, desempenhar um papel significativo no avanço da tecnologia e no desenvolvimento de soluções
                 eficientes.
-                <br>
+                <hr>
                 Minhas principais habilidades técnicas até o momento são:
                 HTML | CSS | JavaScript | React | Docker | MySQL | Node.js |TypeScript | Sequelize| Python | Django
             </p>
